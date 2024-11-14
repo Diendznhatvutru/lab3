@@ -1,0 +1,89 @@
+/* Thiết lập cơ bản */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50; /* Màu nền header */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.container {
+    display: flex; /* Sử dụng flexbox để chia cột */
+}
+
+.sidebar {
+    width: 250px; /* Độ rộng của sidebar */
+    background-color: #fff;
+    border-right: 1px solid #ddd; /* Đường viền bên phải */
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none; /* Bỏ dấu chấm */
+    padding-left: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #1a73e8;
+    padding: 10px;
+    display: block; /* Làm cho toàn bộ khu vực thành clickable */
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #f0f0f0; /* Màu nền khi hover */
+}
+
+.content {
+    flex: 1; /* Chiếm phần còn lại */
+    padding: 20px;
+    background-color: #fff;
+}
+
+.content-item {
+    display: none; /* Ẩn tất cả nội dung ban đầu */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* Phong cách cho nút quay lại */
+.return-link {
+    position: absolute;
+    top: 20px; /* Cách đỉnh header 20px */
+    left: 20px; /* Cách bên trái 20px */
+    background-color: #e91e63;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.return-link:hover {
+    background-color: #c2185b;
+    transform: translateX(-5px); /* Dịch chuyển nhẹ khi hover */
+}

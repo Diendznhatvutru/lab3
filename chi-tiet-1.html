@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết Môn học</title>
+    <link rel="stylesheet" href="detail-style.css">
+</head>
+<body>
+    <header>
+        <h1>Chi tiết Môn học</h1>
+        <a href="index.html" class="return-link">← Quay lại Danh sách Môn học</a>
+    </header>
+
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#" onclick="showContent('tailieu')">Tài liệu Giảng dạy</a></li>
+                <li><a href="#" onclick="showContent('baitap')">Bài tập</a></li>
+                <li><a href="#" onclick="showContent('thamkhao')">Tài liệu Tham khảo</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div id="tailieu" class="content-item" style="display: none;">
+                <h2>Tài liệu Giảng dạy</h2>
+                <ul>
+                    <li>
+                        <a href="tailieu/pdf/OOP_2013.pdf" target="_blank">Tài liệu Giảng dạy (PDF)</a> 
+                        <span>(<a href="tailieu/pdf/OOP_2013.pdf" download>Tải về</a>)</span>
+                    </li>
+                </ul>
+                <iframe src="tailieu/pdf/OOP_2013.pdf" style="width:100%; height:500px; border:none;" title="PDF Preview"></iframe>
+            </div>
+
+            <div id="baitap" class="content-item" style="display: none;">
+                <h2>Bài tập</h2>
+                <ul>
+                    <li>
+                        <a href="exercises/baitap1.docx" download>Bài tập 1 (Word)</a>
+                        <span>(<a href="exercises/baitap1.docx" download>Tải về</a>)</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="thamkhao" class="content-item" style="display: none;">
+                <h2>Tài liệu Tham khảo</h2>
+                <ul>
+                    <li><a href="https://www.example.com" target="_blank">Trang web tham khảo</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 - Chia sẻ tài liệu</p>
+    </footer>
+
+    <script>
+        function showContent(section) {
+            const items = document.querySelectorAll('.content-item');
+            items.forEach(item => {
+                item.style.display = 'none';
+            });
+            document.getElementById(section).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

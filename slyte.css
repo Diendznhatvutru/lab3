@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background-color: #fff;
+    max-width: 1000px;
+    border-radius: 5px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Tạo cột có chiều rộng tối thiểu 200px, tự động điều chỉnh */
+    gap: 20px; /* Khoảng cách giữa các khối môn học */
+    margin-top: 20px;
+}
+
+.course-item {
+    background-color: #1a73e8; /* Màu nền của khối môn học */
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s; /* Hiệu ứng khi hover */
+}
+
+.course-item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.course-item:hover {
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Thêm đổ bóng khi hover */
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
